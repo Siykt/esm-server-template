@@ -1,0 +1,59 @@
+{
+  "name": "esm-server-template",
+  "version": "0.0.1",
+  "description": "A koa server template for esm nodejs",
+  "main": "dist/index.js",
+  "author": "Siykt",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon --config nodemon.json src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsup",
+    "lint": "eslint src --fix --ext .ts"
+  },
+  "dependencies": {
+    "class-validator": "^0.13.2",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.1",
+    "json-logic-js": "^2.0.2",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^12.0.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.21",
+    "nanoid": "3.3.1",
+    "node-schedule": "^2.1.0",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.6.2",
+    "winston": "^3.8.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "^5.0.0",
+    "@types/json-logic-js": "^2.0.1",
+    "@types/koa": "^2.13.5",
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/koa-mount": "^4.0.1",
+    "@types/koa-router": "^7.4.4",
+    "@types/koa-static": "^4.0.2",
+    "@types/lodash": "^4.14.184",
+    "@types/node": "^18.7.13",
+    "@types/node-schedule": "^2.1.0",
+    "@types/nodemailer": "^6.4.5",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.34.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "tsup": "^8.0.2",
+    "typescript": "5.0.3"
+  }
+}
