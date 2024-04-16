@@ -3,7 +3,7 @@
   "ignore": [".git", "node_modules/", "dist/", "coverage/"],
   "watch": ["src/"],
   "execMap": {
-    "ts": "node --loader ts-node/esm --experimental-specifier-resolution=node --experimental-json-modules --no-warnings",
+    "ts": "ts-node src/index.ts",
     "js": "node --loader ts-node/esm --experimental-specifier-resolution=node --experimental-json-modules --no-warnings"
   },
   "env": {
