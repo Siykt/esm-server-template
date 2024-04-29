@@ -1,7 +1,7 @@
 import { Context, Next } from 'koa';
 import { ZodObject, ZodRawShape, ZodError } from 'zod';
 import logger from '../common/logger.js';
-import { map } from 'lodash';
+import _ from 'lodash';
 
 export const dto =
   <T extends ZodRawShape, S extends ZodObject<T>>(schema: S) =>
@@ -9,7 +9,7 @@ export const dto =
     try {
       schema.parse(ctx.request.body);
     } catch (error: unknown) {
-      const errors = map((error as ZodError).errors, 'message');
+      const errors = _.map((error as ZodError).errors, 'message');
       logger.error(`Validation Error: ${errors}`);
 
       ctx.status = 412;
