@@ -98,20 +98,20 @@ import { defineRouter } from '../lib/defineRouter.js';
 import { dto } from '../middlewares/dto.js';
 import { z } from 'zod';
 
-const addressSchema = z.object({
-  address: z.string(),
+const nameVerifySchema = z.object({
+  name: z.string(),
 });
 
-export const whitelistRouter = defineRouter({
-  prefix: '/whitelist',
+export const nameRouter = defineRouter({
+  prefix: '/name',
   health: true,
   routes: [],
 });
 
-whitelistRouter.post('/verify', dto(commonAddressSchema), async (ctx) => {
-  const { address } = ctx.request.body as z.infer<typeof commonAddressSchema>;
+nameRouter.post('/verify', dto(nameVerifySchema), async (ctx) => {
+  const { name } = ctx.request.body as z.infer<typeof nameVerifySchema>;
 
-  ctx.body = addressesHash.has(address);
+  ctx.body = names.has(name);
 });
 ```
 
