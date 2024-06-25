@@ -20,6 +20,7 @@
     "dayjs": "^1.11.5",
     "dotenv": "^16.0.1",
     "json-logic-js": "^2.0.2",
+    "jsonwebtoken": "^9.0.2",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-mount": "^4.0.0",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@sindresorhus/tsconfig": "^5.0.0",
     "@types/json-logic-js": "^2.0.1",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/koa": "^2.13.5",
     "@types/koa-bodyparser": "^4.3.7",
     "@types/koa-mount": "^4.0.1",
